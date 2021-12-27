@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".showDiary">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/highlighter" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gamjaf"
+            android:text="오늘의 그림일기!" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/frameLayout"
+        android:background="@drawable/sketchbook"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="150dp"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        android:layout_marginLeft="150dp">
+
+
+
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:includeFontPadding="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/gamjaf"
+            android:text="2021.03.29"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textDate"
+            android:fontFamily="@font/gamjaf"
+            android:text="제목 : 우와 유진이 코딱지 진짜 커!!" />
+
+
+        <ImageView
+            android:id="@+id/see_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textTitle"
+            android:layout_marginTop="20dp"
+            android:layout_margin="30dp"
+            android:src="@drawable/color_black" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/goDrawingMainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C3D4FF"
+        android:fontFamily="@font/gamjaf"
+        android:text="그림 일기 다시 쓰기"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout3"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout3" />
+
+</RelativeLayout>
